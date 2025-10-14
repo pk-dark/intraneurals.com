@@ -555,7 +555,7 @@ a {
 /* ---------- Services Section ---------- */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: var(--space-xl);
   margin-top: var(--space-2xl);
 }
@@ -676,7 +676,7 @@ a {
 /* ---------- Courses Section ---------- */
 .courses-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(355px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: var(--space-xl);
   margin-top: var(--space-2xl);
 }
@@ -791,7 +791,7 @@ a {
 /* ---------- Partner Institutions Section ---------- */
 .institutions-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: var(--space-xl);
   margin-top: var(--space-2xl);
 }
@@ -827,6 +827,40 @@ a {
   text-transform: uppercase;
 }
 
+.institution-logo {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(var(--glass-blur));
+}
+
+.institution-logo:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--accent-primary);
+}
+
+.institution-logo img {
+  max-width: 100%;
+  max-height: 80px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.institution-logo:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+
 .institution-badge.university { background: #6366f1; color: white; }
 .institution-badge.engineering { background: #3b82f6; color: white; }
 .institution-badge.management { background: #10b981; color: white; }
@@ -842,10 +876,10 @@ a {
 }
 
 .institution-card img {
-  width: 100%;
-  height: 200px;
+  width:100%;
+  height: 150px;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  transition: transform 1s ease;
 }
 
 .institution-card:hover img {
@@ -867,7 +901,7 @@ a {
 }
 
 .institution-meta {
-  display: flex;
+  display:inline-flex;
   flex-wrap: wrap;
   gap: var(--space-md);
   margin-bottom: var(--space-lg);
@@ -1113,7 +1147,7 @@ a {
 .carousel-btn:hover {
   background: var(--gradient-primary);
   border-color: transparent;
-  color: rgb(11, 1, 1);
+  color: rgb(0, 0, 0);
   transform: scale(1.1);
   box-shadow: var(--shadow-glow);
 }
